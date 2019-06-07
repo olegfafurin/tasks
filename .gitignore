@@ -1,0 +1,6 @@
+.idea
+CMakeLists.txt
+codeforces
+cmake-*
+*.in
+*.out
