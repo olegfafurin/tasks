@@ -1,6 +1,11 @@
 .idea
 CMakeLists.txt
 codeforces
+reverse
+trash
+mathlog
 cmake-*
 *.in
 *.out
+*.enc
+*__pycache__
