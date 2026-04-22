@@ -1,3 +1,6 @@
+#ifndef BIN_EXP_H
+#define BIN_EXP_H
+
 template <typename T>
 T power(T b, int e) {
 	T acc = T::identity();
@@ -11,3 +14,5 @@ T power(T b, int e) {
 	}
 	return acc;
 }
+
+#endif

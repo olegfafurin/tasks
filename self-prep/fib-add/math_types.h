@@ -1,11 +1,15 @@
+#ifndef MATH_TYPES_H
+#define MATH_TYPES_H
+
+template <typename T>
 struct Matrix {
-	int a00, a01, a10, a11;
+	T a00, a01, a10, a11;
 
 	Matrix& operator*=(const Matrix &other) {
-		int c00 = a00 * other.a00 + a01 * other.a10;
-		int c01 = a00 * other.a01 + a01 * other.a11;
-		int c10 = a10 * other.a00 + a11 * other.a10;
-		int c11 = a10 * other.a01 + a11 * other.a11;
+		T c00 = a00 * other.a00 + a01 * other.a10;
+		T c01 = a00 * other.a01 + a01 * other.a11;
+		T c10 = a10 * other.a00 + a11 * other.a10;
+		T c11 = a10 * other.a01 + a11 * other.a11;
 		a00 = c00;
 		a01 = c01;
 		a10 = c10;
@@ -19,19 +23,21 @@ struct Matrix {
 	}
 
 	static Matrix identity() {
-		return {1,0,0,1};
+		return {T(1),T(0),T(0),T(1)};
 	}
-
 };
 
+template <typename T>
 struct Vector {
-	int x, y;
+	T x, y;
 
-	Vector& operator*=(const Matrix &other) {
-		int newX = x * other.a00 + y * other.a10;
-		int newY = x * other.a01 + y * other.a11;
+	Vector& operator*=(const Matrix<T> &other) {
+		T newX = x * other.a00 + y * other.a10;
+		T newY = x * other.a01 + y * other.a11;
 		x = newX;
 		y = newY;
 		return *this;
 	}
 };
+
+#endif

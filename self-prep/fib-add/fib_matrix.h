@@ -1,9 +1,10 @@
 #include "bin_exp.h"
 #include "math_types.h"
 
-int fib(int k) {
-	Matrix transform({0,1,1,1});
-	Vector state({0,1});
+template <typename T>
+T fib(int k) {
+	Matrix<T> transform({T(0),T(1),T(1),T(1)});
+	Vector<T> state({T(0),T(1)});
 
 	transform = power(transform, k - 1);
 	state *= transform;
