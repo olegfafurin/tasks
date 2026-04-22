@@ -9,6 +9,7 @@ cmake-*
 *.out
 *.enc
 *__pycache__
+*.o
 
 leetcode/*/sol*
 !leetcode/*/sol*.cpp
