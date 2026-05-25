@@ -32,7 +32,6 @@ class Heap {
             }
             if ((i << 1 | 1) < data.size() && data[i << 1 | 1].first < minValue) {
                 nxt = i << 1 | 1;
-                // minValue = data[i << 1 | 1].first;
             }
             if (nxt == i) {
                 return;
