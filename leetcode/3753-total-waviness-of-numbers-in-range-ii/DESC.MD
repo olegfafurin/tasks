@@ -10,7 +10,7 @@ The first and last digits of a number cannot be peaks or valleys.
 Any number with fewer than 3 digits has a waviness of `0`.
 Return the total sum of waviness for all numbers in the range `[num1, num2]`.
 
-## Example 1
+### Example 1
 
 **Input**
 
@@ -20,7 +20,7 @@ Return the total sum of waviness for all numbers in the range `[num1, num2]`.
 
 `3`
 
-## Example 2
+### Example 2
 
 **Input**
 
@@ -30,7 +30,7 @@ Return the total sum of waviness for all numbers in the range `[num1, num2]`.
 
 `3`
 
-## Example 3
+### Example 3
 
 **Input**
 
@@ -40,7 +40,7 @@ Return the total sum of waviness for all numbers in the range `[num1, num2]`.
 
 `2`
 
-## Constraints:
+### Constraints:
 
 - `1 <= num1 <= num2 <= 10^15`
 
